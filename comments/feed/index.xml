@@ -4,14 +4,17 @@
 	xmlns:atom="http://www.w3.org/2005/Atom"
 	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
 	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
 	>
 <channel>
 	<title>
-	Comments for user&#039;s Blog!	</title>
+	Comments for Pop Slots Free Chips	</title>
 	<atom:link href="https://reporter-8fo.pages.dev/comments/feed/" rel="self" type="application/rss+xml" />
-	<link>https://reporter-8fo.pages.dev</link>
-	<description>Just another WordPress site</description>
-	<lastBuildDate>Thu, 11 Aug 2022 21:29:28 +0000</lastBuildDate>
+	<link>https://reporter-8fo.pages.dev/</link>
+	<description>Get POP Slots Chips Daily with latest updated links in 2019</description>
+	<lastBuildDate>Wed, 03 Aug 2022 07:16:48 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
