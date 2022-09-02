@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<title>Simulating NFL free agency: Predicting offers and landing spots for &#8211; Techworm</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Techworm &raquo; Feed" href="https://reporter-8fo.pages.dev/feed/">
+<link rel="alternate" type="application/rss+xml" title="Techworm &raquo; Comments Feed" href="https://reporter-8fo.pages.dev/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Techworm &raquo; Simulating NFL free agency: Predicting offers and landing spots for Comments Feed" href="https://reporter-8fo.pages.dev/simulating-nfl-free-agency-predicting-offers-and-landing-spots-for/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/reporter-8fo.pages.dev\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="https://reporter-8fo.pages.dev/wp-includes/css/dist/block-library/style.min.css?ver=6.0.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="minimalist-newspaper-style-css" href="https://reporter-8fo.pages.dev/wp-content/themes/newspaperly/style.css?ver=6.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="minimalist-newspaper-css" href="https://reporter-8fo.pages.dev/wp-content/themes/minimalist-newspaper/style.css?ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="poppins-css" href="https://reporter-8fo.pages.dev/wp-content/fonts/4e7a33cb342abfe5f4efb80f985dd928.css?ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="https://reporter-8fo.pages.dev/wp-content/themes/newspaperly/css/font-awesome.min.css?ver=6.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="newspaperly-style-css" href="https://reporter-8fo.pages.dev/wp-content/themes/minimalist-newspaper/style.css?ver=6.0.2" type="text/css" media="all">
+<link rel="stylesheet" id="newspaperly-google-fonts-css" href="//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%7CMerriweather%3A400%2C700&#038;ver=6.0.2" type="text/css" media="all">
+<script type="text/javascript" src="https://reporter-8fo.pages.dev/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://reporter-8fo.pages.dev/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://reporter-8fo.pages.dev/wp-json/">
+<link rel="alternate" type="application/json" href="https://reporter-8fo.pages.dev/wp-json/wp/v2/posts/227">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://reporter-8fo.pages.dev/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://reporter-8fo.pages.dev/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 6.0.2">
+<link rel="canonical" href="https://reporter-8fo.pages.dev/simulating-nfl-free-agency-predicting-offers-and-landing-spots-for/">
+<link rel="shortlink" href="https://reporter-8fo.pages.dev/?p=227">
+<link rel="alternate" type="application/json+oembed" href="https://reporter-8fo.pages.dev/wp-json/oembed/1.0/embed?url=https%3A%2F%2Freporter-8fo.pages.dev%2Fsimulating-nfl-free-agency-predicting-offers-and-landing-spots-for%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://reporter-8fo.pages.dev/wp-json/oembed/1.0/embed?url=https%3A%2F%2Freporter-8fo.pages.dev%2Fsimulating-nfl-free-agency-predicting-offers-and-landing-spots-for%2F&#038;format=xml">
+
+		<style type="text/css">.header-widgets-wrapper, .content-wrap-bg { background-color:  }
+			.featured-sidebar, .featured-sidebar ul li { border-color:  !important; }
+			.page-numbers li a, .blogposts-list .blogpost-button, .page-numbers.current, span.page-numbers.dots { background: ; }
+			.banner-widget-wrapper p, .banner-widget-wrapper h1, .banner-widget-wrapper h2, .banner-widget-wrapper h3, .banner-widget-wrapper h4, .banner-widget-wrapper h5, .banner-widget-wrapper h6, .banner-widget-wrapper ul, .banner-widget-wrapper{ color:  }
+			.banner-widget-wrapper a, .banner-widget-wrapper a:hover, .banner-widget-wrapper a:active, .banner-widget-wrapper a:focus{ color: ; }
+			.banner-widget-wrapper ul li { border-color: ; }
+			body, .site, .swidgets-wrap h3, .post-data-text { background: ; }
+			.site-title a, .site-description { color: ; }
+			.header-bg { background-color:  !important; }
+			.main-navigation ul li a, .main-navigation ul li .sub-arrow, .super-menu .toggle-mobile-menu,.toggle-mobile-menu:before, .mobile-menu-active .smenu-hide { color: ; }
+			#smobile-menu.show .main-navigation ul ul.children.active, #smobile-menu.show .main-navigation ul ul.sub-menu.active, #smobile-menu.show .main-navigation ul li, .smenu-hide.toggle-mobile-menu.menu-toggle, #smobile-menu.show .main-navigation ul li, .primary-menu ul li ul.children li, .primary-menu ul li ul.sub-menu li, .primary-menu .pmenu, .super-menu { border-color: ; border-bottom-color: ; }
+			#secondary .widget h3, #secondary .widget h3 a, #secondary .widget h4, #secondary .widget h1, #secondary .widget h2, #secondary .widget h5, #secondary .widget h6 { color: ; }
+			#secondary .widget a, #secondary a, #secondary .widget li a , #secondary span.sub-arrow{ color: ; }
+			#secondary, #secondary .widget, #secondary .widget p, #secondary .widget li, .widget time.rpwe-time.published { color: ; }
+			#secondary .swidgets-wrap, .featured-sidebar .search-field { border-color: ; }
+			.site-info, .footer-column-three input.search-submit, .footer-column-three p, .footer-column-three li, .footer-column-three td, .footer-column-three th, .footer-column-three caption { color: ; }
+			.footer-column-three h3, .footer-column-three h4, .footer-column-three h5, .footer-column-three h6, .footer-column-three h1, .footer-column-three h2, .footer-column-three h4, .footer-column-three h3 a { color: ; }
+			.footer-column-three a, .footer-column-three li a, .footer-column-three .widget a, .footer-column-three .sub-arrow { color: ; }
+			.footer-column-three h3:after { background: ; }
+			.site-info, .widget ul li, .footer-column-three input.search-field, .footer-column-three input.search-submit { border-color: ; }
+			.site-footer { background-color: ; }
+			.archive .page-header h1, .blogposts-list h2 a, .blogposts-list h2 a:hover, .blogposts-list h2 a:active, .search-results h1.page-title { color: ; }
+			.blogposts-list .post-data-text, .blogposts-list .post-data-text a{ color: ; }
+			.blogposts-list p { color: ; }
+			.page-numbers li a, .blogposts-list .blogpost-button, span.page-numbers.dots, .page-numbers.current, .page-numbers li a:hover { color: ; }
+			.archive .page-header h1, .search-results h1.page-title, .blogposts-list.fbox, span.page-numbers.dots, .page-numbers li a, .page-numbers.current { border-color: ; }
+			.blogposts-list .post-data-divider { background: ; }
+			.page .comments-area .comment-author, .page .comments-area .comment-author a, .page .comments-area .comments-title, .page .content-area h1, .page .content-area h2, .page .content-area h3, .page .content-area h4, .page .content-area h5, .page .content-area h6, .page .content-area th, .single  .comments-area .comment-author, .single .comments-area .comment-author a, .single .comments-area .comments-title, .single .content-area h1, .single .content-area h2, .single .content-area h3, .single .content-area h4, .single .content-area h5, .single .content-area h6, .single .content-area th, .search-no-results h1, .error404 h1 { color: ; }
+			.single .post-data-text, .page .post-data-text, .page .post-data-text a, .single .post-data-text a, .comments-area .comment-meta .comment-metadata a { color: ; }
+			.page .content-area p, .page article, .page .content-area table, .page .content-area dd, .page .content-area dt, .page .content-area address, .page .content-area .entry-content, .page .content-area li, .page .content-area ol, .single .content-area p, .single article, .single .content-area table, .single .content-area dd, .single .content-area dt, .single .content-area address, .single .entry-content, .single .content-area li, .single .content-area ol, .search-no-results .page-content p { color: ; }
+			.single .entry-content a, .page .entry-content a, .comment-content a, .comments-area .reply a, .logged-in-as a, .comments-area .comment-respond a { color: ; }
+			.comments-area p.form-submit input { background: ; }
+			.error404 .page-content p, .error404 input.search-submit, .search-no-results input.search-submit { color: ; }
+			.page .comments-area, .page article.fbox, .page article tr, .page .comments-area ol.comment-list ol.children li, .page .comments-area ol.comment-list .comment, .single .comments-area, .single article.fbox, .single article tr, .comments-area ol.comment-list ol.children li, .comments-area ol.comment-list .comment, .error404 main#main, .error404 .search-form label, .search-no-results .search-form label, .error404 input.search-submit, .search-no-results input.search-submit, .error404 main#main, .search-no-results section.fbox.no-results.not-found{ border-color: ; }
+			.single .post-data-divider, .page .post-data-divider { background: ; }
+			.single .comments-area p.form-submit input, .page .comments-area p.form-submit input { color: ; }
+			.bottom-header-wrapper { padding-top: px; }
+			.bottom-header-wrapper { padding-bottom: px; }
+			.bottom-header-wrapper { background: ; }
+			.bottom-header-wrapper *{ color: ; }
+			.header-widget a, .header-widget li a, .header-widget i.fa { color: ; }
+			.header-widget, .header-widget p, .header-widget li, .header-widget .textwidget { color: ; }
+			.header-widget .widget-title, .header-widget h1, .header-widget h3, .header-widget h2, .header-widget h4, .header-widget h5, .header-widget h6{ color: ; }
+			.header-widget.swidgets-wrap, .header-widget ul li, .header-widget .search-field { border-color: ; }
+			.header-widgets-wrapper .swidgets-wrap{ background: ; }
+			.primary-menu .pmenu, .super-menu, #smobile-menu, .primary-menu ul li ul.children, .primary-menu ul li ul.sub-menu { background-color: ; }
+			#secondary .swidgets-wrap{ background: ; }
+			#secondary .swidget { border-color: ; }
+			.archive article.fbox, .search-results article.fbox, .blog article.fbox { background: ; }
+			.comments-area, .single article.fbox, .page article.fbox { background: ; }</style>
+	<link rel="pingback" href="https://reporter-8fo.pages.dev/xmlrpc.php">
+		<style type="text/css">.header-widgets-wrapper, .content-wrap-bg { background-color:  }
+			.featured-sidebar, .featured-sidebar ul li { border-color:  !important; }
+			.page-numbers li a, .blogposts-list .blogpost-button, .page-numbers.current, span.page-numbers.dots { background: ; }
+			.banner-widget-wrapper p, .banner-widget-wrapper h1, .banner-widget-wrapper h2, .banner-widget-wrapper h3, .banner-widget-wrapper h4, .banner-widget-wrapper h5, .banner-widget-wrapper h6, .banner-widget-wrapper ul, .banner-widget-wrapper{ color:  }
+			.banner-widget-wrapper a, .banner-widget-wrapper a:hover, .banner-widget-wrapper a:active, .banner-widget-wrapper a:focus{ color: ; }
+			.banner-widget-wrapper ul li { border-color: ; }
+			body, .site, .swidgets-wrap h3, .post-data-text { background: ; }
+			.site-title a, .site-description { color: ; }
+			.header-bg { background-color:  !important; }
+			.main-navigation ul li a, .main-navigation ul li .sub-arrow, .super-menu .toggle-mobile-menu,.toggle-mobile-menu:before, .mobile-menu-active .smenu-hide { color: ; }
+			#smobile-menu.show .main-navigation ul ul.children.active, #smobile-menu.show .main-navigation ul ul.sub-menu.active, #smobile-menu.show .main-navigation ul li, .smenu-hide.toggle-mobile-menu.menu-toggle, #smobile-menu.show .main-navigation ul li, .primary-menu ul li ul.children li, .primary-menu ul li ul.sub-menu li, .primary-menu .pmenu, .super-menu { border-color: ; border-bottom-color: ; }
+			#secondary .widget h3, #secondary .widget h3 a, #secondary .widget h4, #secondary .widget h1, #secondary .widget h2, #secondary .widget h5, #secondary .widget h6 { color: ; }
+			#secondary .widget a, #secondary a, #secondary .widget li a , #secondary span.sub-arrow{ color: ; }
+			#secondary, #secondary .widget, #secondary .widget p, #secondary .widget li, .widget time.rpwe-time.published { color: ; }
+			#secondary .swidgets-wrap, .featured-sidebar .search-field { border-color: ; }
+			.site-info, .footer-column-three input.search-submit, .footer-column-three p, .footer-column-three li, .footer-column-three td, .footer-column-three th, .footer-column-three caption { color: ; }
+			.footer-column-three h3, .footer-column-three h4, .footer-column-three h5, .footer-column-three h6, .footer-column-three h1, .footer-column-three h2, .footer-column-three h4, .footer-column-three h3 a { color: ; }
+			.footer-column-three a, .footer-column-three li a, .footer-column-three .widget a, .footer-column-three .sub-arrow { color: ; }
+			.footer-column-three h3:after { background: ; }
+			.site-info, .widget ul li, .footer-column-three input.search-field, .footer-column-three input.search-submit { border-color: ; }
+			.site-footer { background-color: ; }
+			.archive .page-header h1, .blogposts-list h2 a, .blogposts-list h2 a:hover, .blogposts-list h2 a:active, .search-results h1.page-title { color: ; }
+			.blogposts-list .post-data-text, .blogposts-list .post-data-text a{ color: ; }
+			.blogposts-list p { color: ; }
+			.page-numbers li a, .blogposts-list .blogpost-button, span.page-numbers.dots, .page-numbers.current, .page-numbers li a:hover { color: ; }
+			.archive .page-header h1, .search-results h1.page-title, .blogposts-list.fbox, span.page-numbers.dots, .page-numbers li a, .page-numbers.current { border-color: ; }
+			.blogposts-list .post-data-divider { background: ; }
+			.page .comments-area .comment-author, .page .comments-area .comment-author a, .page .comments-area .comments-title, .page .content-area h1, .page .content-area h2, .page .content-area h3, .page .content-area h4, .page .content-area h5, .page .content-area h6, .page .content-area th, .single  .comments-area .comment-author, .single .comments-area .comment-author a, .single .comments-area .comments-title, .single .content-area h1, .single .content-area h2, .single .content-area h3, .single .content-area h4, .single .content-area h5, .single .content-area h6, .single .content-area th, .search-no-results h1, .error404 h1 { color: ; }
+			.single .post-data-text, .page .post-data-text, .page .post-data-text a, .single .post-data-text a, .comments-area .comment-meta .comment-metadata a { color: ; }
+			.page .content-area p, .page article, .page .content-area table, .page .content-area dd, .page .content-area dt, .page .content-area address, .page .content-area .entry-content, .page .content-area li, .page .content-area ol, .single .content-area p, .single article, .single .content-area table, .single .content-area dd, .single .content-area dt, .single .content-area address, .single .entry-content, .single .content-area li, .single .content-area ol, .search-no-results .page-content p { color: ; }
+			.single .entry-content a, .page .entry-content a, .comment-content a, .comments-area .reply a, .logged-in-as a, .comments-area .comment-respond a { color: ; }
+			.comments-area p.form-submit input { background: ; }
+			.error404 .page-content p, .error404 input.search-submit, .search-no-results input.search-submit { color: ; }
+			.page .comments-area, .page article.fbox, .page article tr, .page .comments-area ol.comment-list ol.children li, .page .comments-area ol.comment-list .comment, .single .comments-area, .single article.fbox, .single article tr, .comments-area ol.comment-list ol.children li, .comments-area ol.comment-list .comment, .error404 main#main, .error404 .search-form label, .search-no-results .search-form label, .error404 input.search-submit, .search-no-results input.search-submit, .error404 main#main, .search-no-results section.fbox.no-results.not-found{ border-color: ; }
+			.single .post-data-divider, .page .post-data-divider { background: ; }
+			.single .comments-area p.form-submit input, .page .comments-area p.form-submit input { color: ; }
+			.bottom-header-wrapper { padding-top: px; }
+			.bottom-header-wrapper { padding-bottom: px; }
+			.bottom-header-wrapper { background: ; }
+			.bottom-header-wrapper *{ color: ; }
+			.header-widget a, .header-widget li a, .header-widget i.fa { color: ; }
+			.header-widget, .header-widget p, .header-widget li, .header-widget .textwidget { color: ; }
+			.header-widget .widget-title, .header-widget h1, .header-widget h3, .header-widget h2, .header-widget h4, .header-widget h5, .header-widget h6{ color: ; }
+			.header-widget.swidgets-wrap, .header-widget ul li, .header-widget .search-field { border-color: ; }
+			.header-widgets-wrapper .swidgets-wrap{ background: ; }
+			.primary-menu .pmenu, .super-menu, #smobile-menu, .primary-menu ul li ul.children, .primary-menu ul li ul.sub-menu { background-color: ; }
+			#secondary .swidgets-wrap{ background: ; }
+			#secondary .swidget { border-color: ; }
+			.archive article.fbox, .search-results article.fbox, .blog article.fbox { background: ; }
+			.comments-area, .single article.fbox, .page article.fbox { background: ; }</style>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>		<style type="text/css">.sheader .content-wrap .header-bg {
+			background: url();
+		    background-size: cover;
+		}
+
+	.site-title a,
+		.site-description {
+			color: #blank;
+		}
+
+		.site-title,
+	.site-description,
+	.site-branding {
+		position: absolute;
+		clip: rect(1px, 1px, 1px, 1px);
+	}
+	
+		"
+				.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+		}</style>
+		<!-- Composite Start -->
+</head>
+<body>
+<div id="M749168ScriptRootC1347034"></div>
+<script src="https://jsc.adskeeper.co.uk/t/e/techworm.page.1347034.js" async></script>
+<!-- Composite End -->
+<!-- Composite Start -->
+<div id="M749168ScriptRootC1347036"></div>
+<script src="https://jsc.adskeeper.co.uk/t/e/techworm.page.1347036.js" async></script>
+<!-- Composite End -->
+<!-- Composite Start -->
+<div id="M749168ScriptRootC1347038"></div>
+<script src="https://jsc.adskeeper.co.uk/t/e/techworm.page.1347038.js" async></script>
+<!-- Composite End -->
+
+	
+
+	
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		
+		<div id="page" class="site">
+			<header id="masthead" class="sheader site-header clearfix">
+				<div class="content-wrap">
+
+					<!-- Header background color and image is added to class below -->
+					<div class="header-bg">
+													<div class="site-branding">
+																
+								<!-- If you are viewing the a sub page, make the title a paragraph -->
+								<p class="site-title"><a href="https://reporter-8fo.pages.dev/" rel="home">Techworm</a></p>
+																<p class="site-description">News Around the world</p>
+								
+						</div>
+															</div>
+			</div>
+
+			<!-- Navigation below these lines, move it up if you want it above the header -->
+			<nav id="primary-site-navigation" class="primary-menu main-navigation clearfix">
+				<a href="#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
+				<div class="content-wrap text-center">
+					<div class="center-main-menu">
+						<div class="menu-bimber-demo-video-primary-menu-container"><ul id="primary-menu" class="pmenu">
+<li id="menu-item-5853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-5853"><a href="https://reporter-8fo.pages.dev">Home</a></li>
+<li id="menu-item-5705" class="menu-item-snax-collection-history snax-abstract_history-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-5705"><a title="
+						" href="#">History</a></li>
+<li id="menu-item-5706" class="menu-item-snax-collection-read-later snax-abstract_read-later-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-5706"><a title="
+						" href="#">Read Later</a></li>
+<li id="menu-item-5707" class="menu-item-snax-collection-favourites snax-abstract_favourites-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-5707"><a title="
+						" href="#">Favourites</a></li>
+<li id="menu-item-5704" class="menu-item-snax-my-collections snax-my-collections-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-5704"><a title="
+						" href="#">My Collections</a></li>
+<li id="menu-item-5695" class="bimber-random-post-nav menu-item menu-item-type-custom menu-item-object-custom menu-item-5695"><a title="
+						" href="#">Random Video</a></li>
+</ul></div>					</div>
+				</div>
+			</nav>
+			<div class="content-wrap">
+				<div class="super-menu clearfix">
+					<div class="super-menu-inner">
+						<a href="#" id="pull" class="toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
+					</div>
+				</div>
+			</div>
+			<div id="mobile-menu-overlay"></div>
+			<!-- Navigation above these lines, move it up if you want it above the header -->
+		</header>
+
+<style>#M749168ScriptRootC1356428 {
+        min-height: 300px;
+    }</style>
+<!-- Composite Start -->
+<div id="M749168ScriptRootC1356428"></div>
+<script src="https://jsc.adskeeper.co.uk/t/e/techworm.page.1356428.js" async></script>
+<!-- Composite End -->
+
+		<div class="content-wrap">
+
+
+			<!-- Upper widgets -->
+			<div class="header-widgets-wrapper">
+				
+				
+							</div>
+
+		</div>
+
+		<div id="content" class="site-content clearfix">
+			<div class="content-wrap">
+				<div class="content-wrap-bg">
+
+	<div id="primary" class="featured-content content-area">
+<!-- Composite Start -->
+<div id="M749168ScriptRootC1347037"></div>
+<script src="https://jsc.adskeeper.co.uk/t/e/techworm.page.1347037.js" async></script>
+<!-- Composite End -->
+		<main id="main" class="site-main">
+
+		
+<article id="post-227" class="posts-entry fbox post-227 post type-post status-publish format-standard has-post-thumbnail hentry category-sports">
+				<div class="featured-thumbnail">
+					</div>
+		<header class="entry-header">
+		<h1 class="entry-title">Simulating NFL free agency: Predicting offers and landing spots for</h1>		<div class="entry-meta">
+			<div class="blog-data-wrapper">
+				<div class="post-data-divider"></div>
+				<div class="post-data-positioning">
+					<div class="post-data-text">
+						Posted on 2022					</div>
+				</div>
+			</div>
+		</div>
+<!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><img src="https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F0310%2Fsimulating_nfl_free_agents_1296x729.jpg" alt="Simulating NFL free agency: Predicting offers and landing spots for"><br>
+Mar 11, 2022</p>
+<ul>
+<li>
+<p>NFL Nation</p>
+</li>
+<li>
+<p>Dan Graziano</p>
+<p>Close<img alt="" src="https://a.espncdn.com/combiner/i?img=/i/columnists/full/graziano_dan.png&amp;h=80&amp;w=80&amp;scale=crop">ESPN Staff Writer</p>
+<ul>
+<li>Joined ESPN in 2011</li>
+<li>New Jersey native and author of two published novels</li>
+</ul>
+</li>
+</ul>
+<p>Eight NFL players received the franchise tag this week, and another two of the top presumed-free agents signed extensions. But make no mistake: The 2022 NFL free-agent class is still loaded with talent and big names who could land huge-money deals. How will it all play out? Who will sign where, and for how much? We mocked how offers and deals might go down for six of the top players available at multiple positions.</p>
+<p>Our NFL Nation reporters served as GMs for their teams and made contract offers for key free agents while trying to stay within that team&#8217;s salary-cap restraints and realm of realistic outcomes. The object wasn&#8217;t to &#8220;win&#8221; but rather to accurately reflect how a team might approach negotiations. For instance, the cap-strapped Packers didn&#8217;t throw around any offers here, but the Dolphins and Jaguars had money to spend &#8212; and it showed. Once the offers were all in, national NFL reporter Dan Graziano played the role of player rep, mulled the proposals and &#8220;signed&#8221; each of the playmakers to a new deal.</p>
+<p>So who is headed to a new team, and who re-signed for another go with his current franchise? Who earned the big bucks? Let&#8217;s predict this offseason&#8217;s free agency, which officially opens on March 16 after a two-day negotiating window, for six stars on the open market: Allen Robinson II, J.C. Jackson, Terron Armstead, Von Miller, Tyrann Mathieu and Chandler Jones. Here are some hypothetical pitches and landing spots.</p>
+<p>Jump to:<br>Robinson | Jackson | Armstead<br>Miller | Mathieu | Jones</p>
+<p><img src="https://a.espncdn.com/i/infographics/20170710_nfl_fpr/charts/_end_rule.png" width="100%"><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/16799.png&amp;w=43&amp;h=60&amp;scale=crop&amp;background=0xcccccc&amp;transparent=false"></p>
+<p><b>2021 team:</b> Bears | <b>Free-agent rank:</b> 8</p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ind.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Colts&#8217; offer: Three years, $50 million ($22M guaranteed with incentives for games played and total receptions) &#8230; We have the best running back in the NFL in Jonathan Taylor, which will make your life easier on the outside. <em>&#8212; Mike Wells</em></p>
+<p>2 Related</p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/phi.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Eagles&#8217; offer: One year, $11.5 million ($11.5 guaranteed with incentives of $1M for 1,000-plus receiving yards, $1M for making the Pro Bowl, $500,000 for reaching the postseason and $1M for reaching the Super Bowl) &#8230; If the market doesn&#8217;t shape up to your liking, come pair up with DeVonta Smith for a year, wreak some havoc and cash in next offseason. Remember, it worked for Alshon Jeffery in 2017. <em>&#8212; Tim McManus</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/jax.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Jaguars&#8217; offer: Four years, $82 million ($45M guaranteed and a $15M signing bonus, plus $5M roster bonuses in Years 2 and 3) &#8230; Trevor Lawrence would be the best quarterback you&#8217;ve ever played with in your career, and you can help turn the franchise around &#8212; in a state with no income tax. <em>&#8212; Michael DiRocco</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/nyj.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Jets&#8217; offer: Three years, $54 million ($35M guaranteed) &#8230; We&#8217;re giving you the chance to be WR1 in the New York market, play for a developing team and grow with a young, talented quarterback in Zach Wilson. <em>&#8212; Rich Cimini</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/det.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Lions&#8217; offer: Three years, $45 million ($27.5M guaranteed) &#8230; Interested in coming back to your hometown in Detroit and being a WR1? <em>&#8212; Eric Woodyard</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/jax.png&amp;h=110&amp;w=110" width="31"></p>
+<h2>The decision: Robinson picks the Jaguars</h2>
+<p>When my agent called and said &#8220;Jaguars,&#8221; I started laughing, because &#8230; been there, done that, man. But their offer is just a lot better than the others. Earning $20.5 million per year in Florida goes a lot further than $18 million per year in New Jersey, and I like those roster bonuses in 2023 and 2024 as a way of keeping the team honest. Trevor Lawrence looks like he could be something. New coach Doug Pederson has a Super Bowl ring. Looks like I&#8217;m going back to where it all began. <em>&#8212; Dan Graziano</em></p>
+<p>How he fits: Did I overpay? Probably, but I got a player who has 40 career touchdown catches and has averaged 12.9 yards per catch on 495 receptions from a less-than-underwhelming group of QBs. We&#8217;re talking about Chad Henne, Blake Bortles, Mitchell Trubisky, Chase Daniel, Nick Foles, Andy Dalton and Justin Fields. Trevor Lawrence would be the best QB he has played with in his career. Robinson isn&#8217;t a burner, but he&#8217;s a big, athletic receiver who can go up and get the ball &#8212; something the Jaguars don&#8217;t have right now. He&#8217;d be a huge threat in the red zone, too, which is something the Jaguars desperately need because they threw a league-low seven TD passes in that area in 2021. Pairing Robinson with Marvin Jones Jr., Jamal Agnew, tight end Dan Arnold, running backs Travis Etienne Jr. and James Robinson and a couple rookies from a very good receiver class gives Lawrence a significantly upgraded group of pass-catchers. <em>&#8212; Michael DiRocco</em></p>
+<p><img src="https://a.espncdn.com/i/infographics/20170710_nfl_fpr/charts/_end_rule.png" width="100%"><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/3121649.png&amp;w=43&amp;h=60&amp;scale=crop&amp;background=0xcccccc&amp;transparent=false"></p>
+<p><b>2021 team:</b> Patriots | <b>Free-agent rank:</b> 13</p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lac.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Chargers&#8217; offer: Three years, $35 million ($22M guaranteed) &#8230; This might be a little under-market, and while we have some cap space, we want to build something &#8212; and we have a lot of needs. One of those is a star cornerback. Come to Cali! <em>&#8212; Shelley Smith</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/ne.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Patriots&#8217; offer: Four years, $60 million ($20M guaranteed) &#8230; We know you might find a richer deal elsewhere, but this is as far as we can extend. Perhaps there would be some consideration that this is where your career began when few other teams (if any) believed in you like we did. <em>&#8212; Mike Reiss</em></p>
+<p><img src="https://www.espn.com/nfl/story/_/id/33468747/">play</p>
+<p>1:27</p>
+<p>Brady Henderson reports on the Seahawks releasing Bobby Wagner and what it means for the team.</p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lv.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Raiders&#8217; offer: Four years, $72 million ($36M guaranteed with incentives of $250,000 for six interceptions and $500,000 for 10 interceptions) &#8230; Re-join GM Dave Ziegler and coach Josh McDaniels in state income tax-free Nevada, as they bring the &#8220;Patriot Way&#8221; to the Silver and Black. You can forge your own identity as the Raiders&#8217; best corner since Nnamdi Asomugha and elevate your own brand in the NFL&#8217;s newest market, while keeping this playoff club in contention in the best QB division in the league. <em>&#8212; Paul Gutierrez</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/pit.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Steelers&#8217; offer: Four years, $70 million ($35M guaranteed) &#8230; Come play for Mike Tomlin, one of the league&#8217;s most respected coaches, in a locker room that values defense above all else. You&#8217;d give the secondary another bonafide star alongside safety Minkah Fitzpatrick. <em>&#8212; Brooke Pryor</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/min.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Vikings&#8217; offer: Four years, $70 million ($20M guaranteed) &#8230; Step in and be the No. 1 cornerback on a rebuilding defense &#8212; and be paid like one. <em>&#8212; Kevin Seifert</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lv.png&amp;h=110&amp;w=110" width="31"></p>
+<h2>The decision: Jackson picks the Raiders</h2>
+<p>I&#8217;m knocking two of these off right away. The Pats had their chance, and the Chargers aren&#8217;t really in the ballpark here. The other three are pretty similar, but I&#8217;m taking the Vikings out of it because Las Vegas and Pittsburgh are just offering a lot more in terms of guarantees. The Raiders&#8217; and Steelers&#8217; offers are close, and man &#8230; two all-time classic franchises. Great history of defense. Great uniforms. Really tough choice. The income tax thing is real, though, and that &#8212; plus the familiarity with the folks running the show in Vegas &#8212; breaks the tie. I&#8217;m taking the Raiders&#8217; offer here, though I might go back to the Steelers one more time to see if they&#8217;re willing to top it. <em>&#8212; Dan Graziano</em></p>
+<p>How he fits: Right away, Jackson &#8212; with his eight interceptions and league-leading 23 passes defensed last season &#8212; would solidify a secondary that will have a different look under new defensive coordinator Patrick Graham, departing from the Cover 3 sensibilities that Gus Bradley ran last season. The Raiders have already cleared cap space by re-structuring left tackle Kolton Miller and running back Kenyan Drake, and deciding to cut linebacker Cory Littleton &#8212; and they could free up more money by releasing the likes of defensive end Carl Nassib and linebacker and Nick Kwiatkoski. But Jackson would be CB1, and while Las Vegas hopes that Trayvon Mullen bounces back from an injury-plagued 2021 that limited him to just five games, the Raiders could still target another cornerback in the draft. <em>&#8212; Paul Gutierrez</em></p>
+<p><img src="https://a.espncdn.com/i/infographics/20170710_nfl_fpr/charts/_end_rule.png" width="100%"><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15821.png&amp;w=43&amp;h=60&amp;scale=crop&amp;background=0xcccccc&amp;transparent=false"></p>
+<p><b>2021 team:</b> Saints | <b>Free-agent rank:</b> 1</p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/chi.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Bears&#8217; offer: Three years, $58 million ($26M guaranteed and a $13M signing bonus, plus a $1M escalator for 80% of offensive snaps in 2022) &#8230; Come &#8220;home,&#8221; Terron. OK, we know you&#8217;re basically from the St. Louis side of Illinois, but we&#8217;ll give you the opportunity to come be part of a team with a high ceiling and a potential franchise quarterback we need to protect. That&#8217;s where you come in. Lock down the left side of the O-line and help us build back toward a competitive team with a new offense and fresh start for everyone. <em>&#8212; Courtney Cronin</em></p>
+<p><img data-src="https://a.espncdn.com/photo/2022/0307/nfl_top_100_free_agents_cr_16x9.jpg" src="https://a.espncdn.com/photo/2022/0307/nfl_top_100_free_agents_cr_16x9.jpg"></p>
+<p>• Tracking signings, cuts, trades, more »<br>• Grading deals » | Early winners, losers »<br>• Top 100 » | Guide » | Fantasy spin »<br>More NFL free agency coverage »</p>
+<p> <img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/cin.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Bengals&#8217; offer: Three years, $55 million ($18M guaranteed with a $1M roster bonus on the fifth day of the league year) &#8230; Come block for the reigning AFC champions and quarterback Joe Burrow. <em>&#8212; Ben Baby</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/mia.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Dolphins&#8217; offer: Four years, $92 million ($63M guaranteed) &#8230; You saw what Mike McDaniel&#8217;s schemes did for Trent Williams over the past few years. Now imagine that but with warm weather year-round, world-class facilities and no state income tax. <em>&#8212; Marcel Louis-Jacques</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/no.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Saints&#8217; offer: Two years, $40 million ($16M guaranteed with incentives based on games started and three void years attached from an original five-year offer) &#8230; The Saints won&#8217;t be the highest bidders because of cap constraints (hence the void years to spread out the cap hit), but we still value our longtime starting left tackle. So if your market doesn&#8217;t develop as hoped, we offer a place you know and a contending team. <em>&#8212; Mike Triplett</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/pit.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Steelers&#8217; offer: Three years, $64 million ($40M guaranteed) &#8230; Be the anchor on a new-look offensive line that will lay a foundation for the next great Steelers quarterback &#8212; all while being in a players-first locker room led by coach Mike Tomlin. <em>&#8212; Brooke Pryor</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/mia.png&amp;h=110&amp;w=110" width="31"></p>
+<h2>The decision: Armstead picks the Dolphins</h2>
+<p>Miami&#8217;s offer has everything I could have imagined and more. It blows the others away. It&#8217;d be tough to leave New Orleans, but the Dolphins just really went over the top here, and I&#8217;m signing this before they change their minds. Sixth-three million guaranteed, baby! <em>&#8212; Dan Graziano</em></p>
+<p>How he fits: Armstead is going to want David Bakhtiari-like money, and the Dolphins are equipped to give it to him, sweetening the pot with guaranteed money to seal the deal. He would immediately slot in as Miami&#8217;s starting left tackle, paving the way for a move back to right tackle for Liam Eichenberg. It&#8217;s risky to make a free agent the highest-paid player on your team, but this offensive line needs an infusion of talent, and this might just be what it costs to get it. Armstead comes with his injury risks, but when healthy, he is one of the best tackles in the NFL. <em>&#8212; Marcel Louis-Jacques</em></p>
+<p><img src="https://a.espncdn.com/i/infographics/20170710_nfl_fpr/charts/_end_rule.png" width="100%"><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/13976.png&amp;w=43&amp;h=60&amp;scale=crop&amp;background=0xcccccc&amp;transparent=false"></p>
+<p><b>2021 team: </b>Rams/Broncos | <b>Free-agent rank:</b> 3</p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/dal.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Cowboys&#8217; offer: Two years, $30 million ($30M guaranteed and three void years attached from an original five-year, $90M offer) &#8230; We&#8217;re tugging on Miller&#8217;s heartstrings to return to home in the twilight of his career and pair with Micah Parsons. You can be the leader on our defense. <em>&#8212; Todd Archer</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lar.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Rams&#8217; offer: Two years, $37 million ($20M guaranteed, including $15M fully guaranteed in 2022 and $1M incentives each year for winning the Super Bowl) &#8230; Let&#8217;s go win two more. <em>&#8212; Adam Teicher</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/sea.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Seahawks&#8217; offer: Two years, $24 million ($15M guaranteed, plus $1M in per-game roster bonuses each season and $1.5M incentives each season tied to playing time, sacks and the Pro Bowl) &#8230; We know this isn&#8217;t as big of an offer as you may get from other teams, but the guarantees are strong, and it&#8217;s an opportunity to remain on the West Coast &#8212; not too far from your home and young son in Denver. <em>&#8212; Brady Henderson</em></p>
+<p><img src="https://www.espn.com/nfl/story/_/id/33468747/">play</p>
+<p>2:02</p>
+<p>Stephen A. Smith outlines why he has the Broncos as a prime Super Bowl candidate after they traded for Russell Wilson.</p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/dal.png&amp;h=110&amp;w=110" width="31"></p>
+<h2>The decision: Miller picks the Cowboys</h2>
+<p>The Dallas deal was an eye-catcher at first glance since it&#8217;s five years and $90 million on paper, but it&#8217;s really a two-year, $30 million deal with those void years. It&#8217;s better than what Seattle&#8217;s offering, especially with that silly structure the Seahawks always insist on. So do I take more money but less guarantee from the team I just won the Super Bowl with? Or do I try to win it with a third team? Man, L.A. was fun, but there&#8217;s just something about that star on the helmet. <em>&#8212; Dan Graziano</em></p>
+<p>How he fits: With uncertain futures of Randy Gregory, who is set to be a free agent, and DeMarcus Lawrence, who has refused a pay cut, Miller can be the perfect pass-rushing complement to Micah Parsons and serve as a mentor to the burgeoning star, similar to the way DeMarcus Ware was for Miller in Denver. This would be out of the Cowboys&#8217; recent character in free agency, where they have been low-money shoppers, but Miller remains a top-end pass-rusher and would thrive in Dan Quinn&#8217;s scheme. <em>&#8212; Todd Archer</em></p>
+<p><img src="https://a.espncdn.com/i/infographics/20170710_nfl_fpr/charts/_end_rule.png" width="100%"><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15851.png&amp;w=43&amp;h=60&amp;scale=crop&amp;background=0xcccccc&amp;transparent=false"></p>
+<p><b>2021 team:</b> Chiefs | <b>Free-agent rank:</b> 4</p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/kc.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Chiefs&#8217; offer: Two years, $29.5 million ($20M guaranteed) &#8230; You&#8217;re going to cement your Hall of Fame credentials here because you&#8217;re going to help us win another couple Super Bowls. <em>&#8212; Adam Teicher</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/nyj.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Jets&#8217; offer: Two years, $28 million ($21M guaranteed and one void year attached from an original three-year, $42M offer) &#8230; It&#8217;s a chance to play in a defensive scheme that gives versatile safeties a chance to shine. <em>&#8212; Rich Cimini</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/no.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Saints&#8217; offer: Three years, $42 million ($28M guaranteed and two void years attached from an original five-year offer) &#8230; You can return to you hometown and play a key role for one of the NFL&#8217;s top defenses. <em>&#8212; Mike Triplett</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/kc.png&amp;h=110&amp;w=110" width="31"></p>
+<h2>The decision: Mathieu picks the Chiefs</h2>
+<p>This one was really tough. Very similar offers, all very tempting for a variety of reasons. Robert Saleh&#8217;s defense would be a lot of fun, but I&#8217;m just not sure that I&#8217;m willing to spend the time with a team that far away from winning at this point in my career. And yes, Louisiana is tempting. But I <em>really</em> like playing in the Super Bowl, and I think staying put in Kansas City gives me the best chance to keep doing that for the foreseeable future. <em>&#8212; Dan Graziano</em></p>
+<p>How he fits: Mathieu feels as much a part of the Mount Rushmore for the current Chiefs&#8217; roster as any of their other stars, most of whom have been in Kansas City longer. The whole thing wouldn&#8217;t feel right without him. The Chiefs could use Mathieu much as they have in past seasons, which means he would fill a variety of roles. The team&#8217;s offseason would be off to a good start by re-signing him. <em>&#8212; Adam Teicher</em></p>
+<p><img src="https://a.espncdn.com/i/infographics/20170710_nfl_fpr/charts/_end_rule.png" width="100%"><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14927.png&amp;w=43&amp;h=60&amp;scale=crop&amp;background=0xcccccc&amp;transparent=false"></p>
+<p><b>2021 team:</b> Cardinals | <b>Free-agent rank:</b> 10</p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/den.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Broncos&#8217; offer: Two years, $34 million ($24M guaranteed, with a $500,000 workout bonus each year and incentives of $1.5M for 11 sacks and $1.5M for 14 sacks each year) &#8230; Two words for you, Chandler: Russell Wilson. <em>&#8212; Jeff Legwold</em></p>
+<p><img data-src="https://a.espncdn.com/photo/2021/1213/nfl_mcshay-mock-draft_16x9_608x342.jpg" src="https://a.espncdn.com/photo/2021/1213/nfl_mcshay-mock-draft_16x9_608x342.jpg"></p>
+<p>• <b>Rankings:</b> Kiper » | McShay »<br>• <b>Mocks:</b> Kiper » | McShay » | Reid »<br>• Meet the QBs » | Intriguing teams »<br>• Draft order » | First Draft podcast »<br>• <b>More coverage » | Full rankings »</b></p>
+<p> <img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/sea.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Seahawks&#8217; offer: Two years, $30 million ($18M guaranteed, plus $1M in per-game roster bonuses each season and $2M incentives each season tied to playing time, sacks and the Pro Bowl) &#8230; Come play in a loud stadium and in an attacking defense that will make you its featured pass-rusher. And don&#8217;t worry about the quarterback situation, we&#8217;re still working on that. <em>&#8212; Brady Henderson</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/buf.png&amp;h=110&amp;w=110" width="31"></p>
+<p>Bills&#8217; offer: One year, $10 million ($5M guaranteed) &#8230; We know you&#8217;re from Rochester and attended Syracuse, so how about playing in Buffalo? It might take some creative cap work, and this deal might not be competitive with other offers, but we want an experienced pass-rusher like yourself who will only add to the league&#8217;s No. 1 defense and one of the NFL&#8217;s best teams. <em>&#8212; Alaina Getzenberg</em></p>
+<p><img alt="" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/den.png&amp;h=110&amp;w=110" width="31"></p>
+<h2>The decision: Jones picks the Broncos</h2>
+<p>Honestly, these are all disappointing for a player with my credentials. If these are the choices, then I might sit out a while and see if the landscape changes, a la Jadeveon Clowney from a couple of years back. I know my worth, and I&#8217;ve made plenty of money. I can wait until someone comes up. But if this is the market, I&#8217;m going back to the Broncos and saying, &#8220;Sure, I&#8217;ll take the $24 million guaranteed, but I want the deal to void after one year so I can pocket my $24 million and hit the market again after I go out there and post my eighth double-digit sack season.&#8221; You hear that? Eight! <em>&#8212; Dan Graziano</em></p>
+<p>How he fits: The Broncos have lived this life before, and it worked out for all involved. A 32-year-old DeMarcus Ware signed with the Broncos in 2014 in large part because Peyton Manning was at quarterback. Jones gives the Broncos the edge presence they need alongside Bradley Chubb. And newly hired defensive coordinator Ejiro Evero, who just won a Super Bowl ring, has promised to pressure opposing quarterbacks as much as possible, so Jones will be set loose to earn every incentive in the deal. <em>&#8212; Jeff Legwold</em></p>
+
+			</div>
+<!-- .entry-content -->
+</article><!-- #post-227 -->
+
+<div id="comments" class="fbox comments-area">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://reporter-8fo.pages.dev/simulating-nfl-free-agency-predicting-offers-and-landing-spots-for/#respond" style="display:none;">Cancel reply</a></small>
+</h3>
+<form action="https://reporter-8fo.pages.dev/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message" aria-hidden="true">Required fields are marked <span class="required" aria-hidden="true">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Comment <span class="required" aria-hidden="true">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Name <span class="required" aria-hidden="true">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required" aria-hidden="true">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="227" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+</form>	</div>
+<!-- #respond -->
+	
+</div>
+<!-- #comments -->
+
+		</main><!-- #main -->
+
+<!-- Composite Start -->
+<div id="M749168ScriptRootC1347037"></div>
+<script src="https://jsc.adskeeper.co.uk/t/e/techworm.page.1347037.js" async></script>
+<!-- Composite End -->
+	</div>
+<!-- #primary -->
+
+
+<aside id="secondary" class="featured-sidebar widget-area">
+	<section id="block-2" class="fbox swidgets-wrap widget widget_block widget_search"><form role="search" method="get" action="https://reporter-8fo.pages.dev/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search">
+<label for="wp-block-search__input-1" class="wp-block-search__label">Search</label><div class="wp-block-search__inside-wrapper ">
+<input type="search" id="wp-block-search__input-1" class="wp-block-search__input " name="s" value="" placeholder="" required><button type="submit" class="wp-block-search__button  ">Search</button>
+</div>
+</form></section><section id="block-3" class="fbox swidgets-wrap widget widget_block"><div class="wp-container-1 wp-block-group"><div class="wp-block-group__inner-container">
+<h2>Recent Posts</h2>
+<ul class="wp-block-latest-posts__list wp-block-latest-posts">
+<li><a class="wp-block-latest-posts__post-title" href="https://reporter-8fo.pages.dev/live-transfer-talk-man-city-close-in-on-anderlechts-gomez/">LIVE Transfer Talk: Man City close in on Anderlecht&#8217;s Gomez</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://reporter-8fo.pages.dev/your-makeup-brushes-are-filthy-heres-how-often-you-should-wash-them/">Your makeup brushes are filthy — here’s how often you should wash them</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://reporter-8fo.pages.dev/motley-crues-tommy-lee-posts-full-frontal-nude-photo-ooooopppsss/">Mötley Crüe’s Tommy Lee posts full-frontal nude photo: ‘Ooooopppsss’</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://reporter-8fo.pages.dev/who-could-be-the-next-big-breakout-star-in-europe/">Who could be the next big breakout star in Europe?</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://reporter-8fo.pages.dev/5-ways-to-improve-your-dental-hygiene/">5 ways to Improve your Dental Hygiene</a></li>
+</ul>
+</div></div></section><section id="block-4" class="fbox swidgets-wrap widget widget_block"><div class="wp-container-2 wp-block-group"><div class="wp-block-group__inner-container">
+<h2>Recent Comments</h2>
+<div class="no-comments wp-block-latest-comments">No comments to show.</div>
+</div></div></section><section id="recent-comments-5" class="fbox swidgets-wrap widget widget_recent_comments"><div class="swidget"><div class="sidebar-title-border"><h3 class="widget-title">Recent Comments</h3></div></div>
+<ul id="recentcomments"></ul></section><section id="recent-comments-5" class="fbox swidgets-wrap widget widget_recent_comments"><div class="swidget"><div class="sidebar-title-border"><h3 class="widget-title">Recent Comments</h3></div></div>
+<ul id="recentcomments-5"></ul></section></aside><!-- #secondary -->
+	</div>
+</div>
+</div>
+<!-- #content -->
+<div class="content-wrap">
+
+	<footer id="colophon" class="site-footer clearfix">
+
+					<div class="footer-column-wrapper">
+				<div class="footer-column-three footer-column-left">
+									</div>
+			
+			
+						<div class="site-info">
+				&copy;2022 Techworm
+
+				<!-- Delete below lines to remove copyright from footer -->
+				<span class="footer-info-right">
+					 | Design: <a href="https://superbthemes.com/">Newspaperly WordPress Theme</a>
+				</span>
+				<!-- Delete above lines to remove copyright from footer -->
+
+			</div>
+		</div>
+	</footer><!-- #colophon -->
+</div>
+
+</div>
+<!-- #page -->
+
+<div id="smobile-menu" class="mobile-only"></div>
+<div id="mobile-menu-overlay"></div>
+
+<style>.wp-container-1 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-1 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-1 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<style>.wp-container-2 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-2 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-2 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
+<script type="text/javascript" src="https://reporter-8fo.pages.dev/wp-content/themes/newspaperly/js/navigation.js?ver=20170823" id="newspaperly-navigation-js"></script>
+<script type="text/javascript" src="https://reporter-8fo.pages.dev/wp-content/themes/newspaperly/js/skip-link-focus-fix.js?ver=20170823" id="newspaperly-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="https://reporter-8fo.pages.dev/wp-content/themes/newspaperly/js/jquery.flexslider.js?ver=20150423" id="newspaperly-flexslider-jquery-js"></script>
+<script type="text/javascript" src="https://reporter-8fo.pages.dev/wp-content/themes/newspaperly/js/script.js?ver=20160720" id="newspaperly-script-js"></script>
+<script type="text/javascript" src="https://reporter-8fo.pages.dev/wp-includes/js/comment-reply.min.js?ver=6.0.2" id="comment-reply-js"></script>
+
+</body>
+</html>
